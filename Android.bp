@@ -65,7 +65,6 @@ apex {
     name: "com.libremobileos.microg",
     defaults: ["u-launched-apex-module"],
     manifest: "manifest.json",
-    file_contexts: ":apex.test-file_contexts",  // Default, please edit, see go/android-apex-howto
     apps: ["GmsCoreMicrog", "FakeStore", "GsfProxy"],
     prebuilts: [
         "microg.xml",
@@ -82,7 +81,6 @@ apex {
     name: "com.libremobileos.microg-stub",
     defaults: ["u-launched-apex-module"],
     manifest: "manifest-stub.json",
-    file_contexts: ":apex.test-file_contexts",  // Default, please edit, see go/android-apex-howto
     key: "com.libremobileos.microg.key",
     certificate: ":microg.certificate",
     compressible: false,
