@@ -1,5 +1,6 @@
 //
 // Copyright (C) 2023 Kenvyra
+// Copyright (C) 2024 The LibreMobileOS Foundation
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -9,9 +10,9 @@ package {
 }
 
 apex_key {
-    name: "org.kenvyra.microg.key",
-    public_key: "org.kenvyra.microg.avbpubkey",
-    private_key: "org.kenvyra.microg.pem",
+    name: "com.libremobileos.microg.key",
+    public_key: "com.libremobileos.microg.avbpubkey",
+    private_key: "com.libremobileos.microg.pem",
 }
 
 android_app_import {
@@ -33,7 +34,7 @@ android_app_import {
     ],
     apex_available: [
         "//apex_available:platform",
-        "org.kenvyra.microg",
+        "com.libremobileos.microg",
     ],
 }
 
@@ -45,7 +46,7 @@ android_app_import {
     privileged: true,
     apex_available: [
         "//apex_available:platform",
-        "org.kenvyra.microg",
+        "com.libremobileos.microg",
     ],
 }
 
@@ -56,12 +57,12 @@ android_app_import {
     certificate: ":microg.certificate",
     apex_available: [
         "//apex_available:platform",
-        "org.kenvyra.microg",
+        "com.libremobileos.microg",
     ],
 }
 
 apex {
-    name: "org.kenvyra.microg",
+    name: "com.libremobileos.microg",
     defaults: ["u-launched-apex-module"],
     manifest: "manifest.json",
     file_contexts: ":apex.test-file_contexts",  // Default, please edit, see go/android-apex-howto
@@ -71,18 +72,18 @@ apex {
         "privapp-permissions-microg.xml",
         "whitelist-microg.xml"
     ],
-    key: "org.kenvyra.microg.key",
+    key: "com.libremobileos.microg.key",
     certificate: ":microg.certificate",
     compressible: false,
     updatable: true,
 }
 
 apex {
-    name: "org.kenvyra.microg-stub",
+    name: "com.libremobileos.microg-stub",
     defaults: ["u-launched-apex-module"],
     manifest: "manifest-stub.json",
     file_contexts: ":apex.test-file_contexts",  // Default, please edit, see go/android-apex-howto
-    key: "org.kenvyra.microg.key",
+    key: "com.libremobileos.microg.key",
     certificate: ":microg.certificate",
     compressible: false,
     updatable: true,
