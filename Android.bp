@@ -18,7 +18,7 @@ apex_key {
 android_app_import {
     name: "GmsCoreMicrog",
     owner: "microg",
-    apk: "GmsCore/play-services-core-mapbox-default-release.apk",
+    apk: "GmsCore/com.google.android.gms.apk",
     certificate: ":microg.certificate",
     privileged: true,
     uses_libs: ["com.android.location.provider"],
@@ -41,7 +41,7 @@ android_app_import {
 android_app_import {
     name: "FakeStore",
     owner: "microg",
-    apk: "GmsCore/vending-app-default-release-unsigned.apk",
+    apk: "GmsCore/com.android.vending.apk",
     certificate: ":microg.certificate",
     privileged: true,
     apex_available: [
@@ -53,7 +53,7 @@ android_app_import {
 android_app_import {
     name: "GsfProxy",
     owner: "microg",
-    apk: "GsfProxy/services-framework-proxy-release-unsigned.apk",
+    apk: "GsfProxy/GsfProxy.apk",
     certificate: ":microg.certificate",
     apex_available: [
         "//apex_available:platform",
