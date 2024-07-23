@@ -19,7 +19,7 @@ android_app_import {
     name: "GmsCoreMicrog",
     owner: "microg",
     apk: "GmsCore/com.google.android.gms.apk",
-    certificate: ":microg.certificate",
+    presigned: true,
     privileged: true,
     uses_libs: ["com.android.location.provider"],
     optional_uses_libs: [
@@ -42,7 +42,7 @@ android_app_import {
     name: "FakeStore",
     owner: "microg",
     apk: "GmsCore/com.android.vending.apk",
-    certificate: ":microg.certificate",
+    presigned: true,
     privileged: true,
     apex_available: [
         "//apex_available:platform",
@@ -54,7 +54,7 @@ android_app_import {
     name: "GsfProxy",
     owner: "microg",
     apk: "GsfProxy/GsfProxy.apk",
-    certificate: ":microg.certificate",
+    presigned: true,
     apex_available: [
         "//apex_available:platform",
         "com.libremobileos.microg",
