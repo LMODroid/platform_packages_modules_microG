@@ -66,6 +66,7 @@ apex {
     defaults: ["u-launched-apex-module"],
     manifest: "manifest.json",
     apps: ["GmsCoreMicrog", "FakeStore", "GsfProxy"],
+    overrides: [ "com.libremobileos.microg-stub" ],
     prebuilts: [
         "microg.xml",
         "privapp-permissions-microg.xml",
