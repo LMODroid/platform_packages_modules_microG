@@ -11,21 +11,42 @@ package {
 }
 
 prebuilt_etc {
+    name: "default-permissions-com.google.android.gms.xml",
+    sub_dir: "default-permissions",
+    src: "default-permissions-com.google.android.gms.xml",
+    installable: false,
+}
+
+prebuilt_etc {
     name: "microg.xml",
     src: "microg.xml",
     installable: false,
 }
 
 prebuilt_etc {
-    name: "privapp-permissions-microg.xml",
+    name: "privapp-permissions-com.google.android.gms.xml",
     sub_dir: "permissions",
-    src: "privapp-permissions-microg.xml",
+    src: "privapp-permissions-com.google.android.gms.xml",
     installable: false,
 }
 
 prebuilt_etc {
-    name: "whitelist-microg.xml",
+    name: "sysconfig-com.google.android.gms.xml",
     sub_dir: "sysconfig",
-    src: "whitelist-microg.xml",
+    src: "sysconfig-com.google.android.gms.xml",
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "default-permissions-com.android.vending.xml",
+    sub_dir: "default-permissions",
+    src: "default-permissions-com.android.vending.xml",
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.android.vending.xml",
+    sub_dir: "permissions",
+    src: "privapp-permissions-com.android.vending.xml",
     installable: false,
 }

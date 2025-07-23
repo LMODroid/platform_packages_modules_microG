@@ -29,8 +29,9 @@ android_app_import {
     ],
     required: [
         "microg.xml",
-        "privapp-permissions-microg.xml",
-        "whitelist-microg.xml",
+        "default-permissions-com.google.android.gms.xml",
+        "privapp-permissions-com.google.android.gms.xml",
+        "sysconfig-com.google.android.gms.xml",
     ],
     apex_available: [
         "//apex_available:platform",
@@ -44,6 +45,10 @@ android_app_import {
     apk: "GmsCore/com.android.vending.apk",
     presigned: true,
     privileged: true,
+    required: [
+        "default-permissions-com.android.vending.xml",
+        "privapp-permissions-com.android.vending.xml",
+    ],
     apex_available: [
         "//apex_available:platform",
         "com.libremobileos.microg",
@@ -69,8 +74,11 @@ apex {
     overrides: [ "com.libremobileos.microg-stub" ],
     prebuilts: [
         "microg.xml",
-        "privapp-permissions-microg.xml",
-        "whitelist-microg.xml"
+        "default-permissions-com.android.vending.xml",
+        "privapp-permissions-com.android.vending.xml",
+        "default-permissions-com.google.android.gms.xml",
+        "privapp-permissions-com.google.android.gms.xml",
+        "sysconfig-com.google.android.gms.xml"
     ],
     key: "com.libremobileos.microg.key",
     certificate: ":microg.certificate",
